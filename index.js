@@ -29,3 +29,8 @@ headings.forEach(heading => {
     heading.appendChild(span);
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.body.classList.add("loaded");
+});

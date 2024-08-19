@@ -1,10 +1,17 @@
 body {
     background-color: #000;
+    /* background-image: url('image.png'); Replace with the actual path to your PNG image */
+    /* background-image: url('elden_ring_background.jpg'); /* Replace with your image */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
+    /* background-attachment: fixed; */ 
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
     color: #fff;
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 20px;
-    /* overflow: hidden; Add this for a full-screen effect */
 }
 
 header {
@@ -12,7 +19,6 @@ header {
     color: #0ff; /* Neon blue */
     text-shadow: 0 0 10px #0ff; /* Neon glow effect */
     height: 150px; /* Adjust the height as needed */
-     
 }
 
 nav ul {
@@ -23,8 +29,6 @@ nav ul {
 
 nav li {
     margin: 0 10px;
-    color: #0ff;
-    text-shadow: 0 0 10px #0ff;
 }
 
 section {
@@ -40,24 +44,43 @@ section {
     background: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
-
-
 }
-header h1,
-nav a,
-section h2 {
+
+header h1, section h2 {
     color: #0FFF00; /* Neon green */
-    text-shadow: 0 0 10px  #0FFF00;
-    opacity: 0.5s;
-    /* transition: opacity 0.5s ease-in-out; Adjust duration and easing as needed */
-      
+    text-shadow: 0 0 10px #0FFF00;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
 }
-
-header h1{
+nav a{
+    color: gold; 
+    text-shadow: 0 0 10px #0ff;
+    opacity: 0;
     transition: opacity 2s ease-in-out;
 }
 
-nav a{
-    color: gold;
+/* Activate fade-in on page load */
+body.loaded header h1, body.loaded section h2, body.loaded nav a {
+    opacity: 1;
 }
 
+a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline; /* Or another hover effect */
+    color: #ff0000; 
+    text-shadow: #0ff;/* Or another color */
+  }
+
+  .social-icon {
+    transition: transform 0.2s ease-in-out; /* Add smooth animation */
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.2); /* Increase size on hover by 20% */
+  }
+/* p{ */
+    /* color:#0FFF00; */
+/* } */
